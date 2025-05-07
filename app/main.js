@@ -1,22 +1,5 @@
 // Variables
-var audio = document.getElementById("audioPlayer");
 var loader = document.getElementById("preloader");
-
-// Function: Toggle settings
-function settingtoggle() {
-    document.getElementById("setting-container").classList.toggle("settingactivate");
-    document.getElementById("visualmodetogglebuttoncontainer").classList.toggle("visualmodeshow");
-    document.getElementById("soundtogglebuttoncontainer").classList.toggle("soundmodeshow");
-}
-
-// Function: Play or pause audio
-function playpause() {
-    if (document.getElementById("switchforsound").checked == false) {
-        audio.pause();
-    } else {
-        audio.play();
-    }
-}
 
 // Function: Toggle visual mode
 function visualmode() {
@@ -83,29 +66,6 @@ window.addEventListener("scroll", () => {
     });
 });
 
-// Console log for developer credit
-console.log("%c Designed and Developed by Praveen ", 
-    "background-image: linear-gradient(90deg,#8000ff,#6bc5f8); color: white; font-weight:900; font-size:1rem; padding:20px;");
-
-// Back to top button
-let mybutton = document.getElementById("backtotopbutton");
-
-function scrollFunction() {
-    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-}
-
-function scrolltoTopfunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-
-window.onscroll = function() {
-    scrollFunction();
-};
 
 // Prevent right-click on images
 document.addEventListener("contextmenu", function(event) {
@@ -115,7 +75,7 @@ document.addEventListener("contextmenu", function(event) {
 }, false);
 
 // Variables for pupil movement
-let Pupils = document.getElementsByClassName("footer-pupil");
+let Pupils = document.getElementsByClassName("footer-pupl");
 let pupilsArr = Array.from(Pupils);
 let pupilStartPoint = -10;
 let pupilRangeX = 20;
